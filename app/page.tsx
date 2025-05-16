@@ -98,7 +98,13 @@ export default function Home() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+type FeatureCardProps = {
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
       <div className="mb-4">{icon}</div>
